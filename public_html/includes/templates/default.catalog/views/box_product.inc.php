@@ -176,12 +176,27 @@
           </div>
           <?php } ?>
 
-          <div class="social-bookmarks text-center">
-            <a class="link" href="#"><?php echo functions::draw_fonticon('fa-link', 'style="color: #333;"'); ?></a>
-            <a class="twitter" href="<?php echo document::href_link('https://twitter.com/intent/tweet/', ['text' => $name .' - '. $link]); ?>" target="_blank" title="<?php echo sprintf(language::translate('text_share_on_s', 'Share on %s'), 'Twitter'); ?>"><?php echo functions::draw_fonticon('fa-twitter-square fa-lg', 'style="color: #55acee;"'); ?></a>
-            <a class="facebook" href="<?php echo document::href_link('https://www.facebook.com/sharer.php', ['u' => $link]); ?>" target="_blank" title="<?php echo sprintf(language::translate('text_share_on_s', 'Share on %s'), 'Facebook'); ?>"><?php echo functions::draw_fonticon('fa-facebook-square fa-lg', 'style="color: #3b5998;"'); ?></a>
-            <a class="pinterest" href="<?php echo document::href_link('https://pinterest.com/pin/create/button/', ['url' => $link]); ?>" target="_blank" title="<?php echo sprintf(language::translate('text_share_on_s', 'Share on %s'), 'Pinterest'); ?>"><?php echo functions::draw_fonticon('fa-pinterest-square fa-lg', 'style="color: #bd081c;"'); ?></a>
-          </div>
+          <!-- AddToAny BEGIN -->
+			<style type="text/css">
+#my_centered_buttons { display: flex; justify-content: center; }
+</style>
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="my_centered_buttons">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_facebook_messenger"></a>
+<a class="a2a_button_x"></a>
+<a class="a2a_button_threads"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_viber"></a>
+<a class="a2a_button_telegram"></a>
+<a class="a2a_button_copy_link"></a>
+<a class="a2a_button_email"></a>
+</div>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.locale = "en";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 
         </div>
       </div>
